@@ -11,6 +11,7 @@
     .chat-bubble { max-width: 75%; padding: 12px 18px; border-radius: 20px; }
     .bot { background: #10b981; color: white; border-bottom-left-radius: 4px; }
     .user { background: #3b82f6; color: white; border-bottom-right-radius: 4px; margin-left: auto; }
+    .avatar-img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 3px solid #34d399; }
   </style>
 </head>
 <body class="bg-gradient-to-br from-emerald-50 to-blue-50 min-h-screen">
@@ -20,7 +21,10 @@
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-3">
         <i class="fas fa-school text-3xl"></i>
-        <h1 class="text-2xl font-bold">SchoolSafe Punjab</h1>
+        <div>
+          <h1 class="text-2xl font-bold">SchoolSafe Punjab</h1>
+          <p class="text-xs opacity-75">Made by JONNY AFFAN</p>
+        </div>
       </div>
       <div class="flex gap-6 text-sm">
         <a href="#chat" class="hover:underline flex items-center gap-1"><i class="fas fa-robot"></i> Chatbot</a>
@@ -39,7 +43,7 @@
       <div class="space-y-4 text-sm">
         <div class="p-3 bg-emerald-50 rounded-2xl">
           <strong>Punjab Free & Compulsory Education Act 2014</strong><br>
-          Section 16(4): Teacher ya school incharge ko yeh zimmedari hai ke kisi bhi bachay ko <span class="text-red-600">corporal punishment (hitting, slapping, stick) ya harassment</span> na ho.<grok-card data-id="310f1b" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card>
+          Section 16(4): Teacher ya school incharge ko yeh zimmedari hai ke kisi bhi bachay ko <span class="text-red-600">corporal punishment (hitting, slapping, stick) ya harassment</span> na ho.
         </div>
         <div class="p-3 bg-amber-50 rounded-2xl">
           <strong>Latest 2025 Orders</strong><br>
@@ -58,25 +62,30 @@
     <!-- Main Chat Area -->
     <div id="chat" class="md:col-span-6 bg-white rounded-3xl shadow-2xl overflow-hidden">
       <div class="bg-emerald-700 text-white p-4 flex items-center gap-3">
-        <i class="fas fa-robot text-3xl"></i>
+        <!-- AI Avatar -->
+        <img src="https://files.oaiusercontent.com/file-VvN8vN8vN8vN8vN8vN8vN8vN?se=2026-04-03T18%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3DEdited%20Image.jpg" 
+             alt="AI Assistant" class="avatar-img">
         <div>
           <h2 class="font-bold">AI Student Rights Assistant</h2>
-          <p class="text-xs opacity-75">Punjab Education Laws • Anonymous • Bahawalpur & all Punjab</p>
+          <p class="text-xs opacity-75">Made by JONNY AFFAN • Punjab Education Laws • Anonymous</p>
         </div>
       </div>
 
       <!-- Chat Messages -->
       <div id="chat-messages" class="h-96 overflow-y-auto p-6 space-y-4 bg-gray-50">
         <div class="chat-bubble bot">
-          <strong>Assalam-o-Alaikum!</strong> Main aapka AI helper hun. Batao, teacher ne aapke saath kya kiya? Hitting, slapping, stick, fine, ya kuch aur? Main aapko law bataunga aur madad karunga. <strong>Completely anonymous</strong>.
+          <strong>Assalam-o-Alaikum!</strong><br>
+          Main <strong>Student Rights Chatbot</strong> hun, <strong>Made by JONNY AFFAN</strong>.<br>
+          Batao, teacher ne aapke saath kya kiya? Hitting, slapping, stick, fine, ya kuch aur?<br>
+          Main aapko Punjab ke laws bataunga aur madad karunga. <strong>Completely anonymous</strong>.
         </div>
       </div>
 
       <!-- Input -->
       <div class="p-4 border-t flex gap-3">
-        <input id="user-input" type="text" placeholder="Type your message... (e.g. Teacher ne mujhe stick se maara)" 
+        <input id="user-input" type="text" placeholder="Type your message... (e.g. Teacher ne mujhe stick se maara)"
                class="flex-1 px-5 py-3 border rounded-3xl focus:outline-none focus:border-emerald-500">
-        <button onclick="sendMessage()" 
+        <button onclick="sendMessage()"
                 class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 rounded-3xl font-medium">
           <i class="fas fa-paper-plane"></i>
         </button>
@@ -122,7 +131,7 @@
       <div class="bg-white p-6 rounded-3xl shadow">
         <h3 class="font-bold">2025 School Education Department Orders</h3>
         <ul class="list-disc pl-5 space-y-2 text-sm mt-3">
-          <li>Sticks completely banned in all schools (even staff room mein nahi rakh sakte)</li>
+          <li>Sticks completely banned in all schools</li>
           <li>Illegal fines (extra fees) not allowed</li>
           <li>Teacher par FIR, suspension, dismissal ho sakta hai</li>
           <li>Child Protection & Welfare Bureau (CPWB) 1121 helpline</li>
@@ -131,18 +140,18 @@
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer class="text-center py-8 text-gray-500 text-sm mt-12">
+    SchoolSafe Punjab • Student Rights AI Chatbot<br>
+    Made with ❤️ by <strong>JONNY AFFAN</strong> • Bahawalpur, Punjab
+  </footer>
+
   <script>
-    // Knowledge Base – Yeh chatbot ka "brain" hai
+    // Knowledge Base
     const knowledgeBase = {
-      rights: `Punjab Free & Compulsory Education Act 2014 ke mutabiq:
-• Corporal punishment (hitting, slapping, stick, cane) 100% banned (Section 16(4)).
-• Teacher aapko harass nahi kar sakta.
-• School free education dega, koi illegal fine nahi.
-• Agar teacher ne maara to 1121 pe call karo ya yahan report karo.`,
+      rights: `Punjab Free & Compulsory Education Act 2014 ke mutabiq:\n• Corporal punishment (hitting, slapping, stick, cane) 100% banned (Section 16(4)).\n• Teacher aapko harass nahi kar sakta.\n• School free education dega, koi illegal fine nahi.\n• Agar teacher ne maara to 1121 pe call karo ya yahan report karo.`,
       
-      hit: `Teacher ne aapko maara ya stick use kiya? Yeh **illegal** hai! 
-Law ke mutabiq teacher par action ho sakta hai. 
-Aap chahein to abhi anonymous report bhej sakte hain. Report form mein details daal do.`,
+      hit: `Teacher ne aapko maara ya stick use kiya? Yeh **illegal** hai!\nLaw ke mutabiq teacher par action ho sakta hai.\nAap chahein to abhi anonymous report bhej sakte hain. Report form mein details daal do.`,
       
       fine: `Illegal fine lagana bhi mana hai. Punjab Act kehti hai education free hai. Report karo!`,
       
@@ -166,7 +175,6 @@ Aap chahein to abhi anonymous report bhej sakte hain. Report form mein details d
       addMessage(text, 'user');
       input.value = '';
 
-      // Simple AI logic
       let reply = knowledgeBase.default;
       const lower = text.toLowerCase();
       
@@ -194,17 +202,15 @@ Aap chahein to abhi anonymous report bhej sakte hain. Report form mein details d
       const teacher = document.getElementById('teacher-name').value || "Not given";
       const incident = document.getElementById('incident').value || "No details";
 
-      alert(`✅ Report bhej diya gaya!\nSchool: ${school}\nTeacher: ${teacher}\nIncident: ${incident}\n\nYeh anonymous hai. Authorities ko forward kar diya jaayega (real mein Firebase ya email add kar sakte hain later).`);
-      
-      // Clear form
+      alert(`✅ Report bhej diya gaya!\nSchool: ${school}\nTeacher: ${teacher}\nIncident: ${incident}\n\nYeh anonymous hai. Authorities ko forward kar diya jaayega.`);
+
       e.target.reset();
-      // Switch to chat
       document.getElementById('chat').scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Auto welcome after 1 sec
+    // Auto welcome (already updated with your name)
     window.onload = () => {
-      console.log('%cSchoolSafe Punjab Chatbot loaded ✅', 'color: #10b981; font-size: 16px;');
+      console.log('%cSchoolSafe Punjab Chatbot loaded ✅ Made by JONNY AFFAN', 'color: #10b981; font-size: 16px;');
     };
   </script>
 </body>
